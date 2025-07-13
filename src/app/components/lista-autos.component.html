@@ -1,0 +1,30 @@
+<div class="container mt-4">
+  <h2 class="mb-4 text-center">Lista de Autos</h2>
+
+  <div class="row">
+    <div *ngFor="let auto of autos" class="col-md-4 mb-4">
+      <div class="card h-100 shadow border-0">
+        <img 
+          [src]="auto.imagenes[0] || 'assets/img/default-car.jpg'" 
+          class="card-img-top" 
+          alt="Imagen del auto">
+
+        <div class="card-body">
+          <h5 class="card-title">{{ auto.marca }} - {{ auto.modelo }}</h5>
+          <p class="card-text">{{ auto.descripcion }}</p>
+          <p class="card-text fw-bold">Precio: {{ auto.precio | currency:'COP' }}</p>
+
+          <!-- Botones visibles solo para administradores -->
+          <div *ngIf="esAdmin" class="d-flex justify-content-between mt-3">
+            <a *ngIf="auto._id" [routerLink]="['/editar', auto._id]" class="btn btn-warning btn-sm w-50 me-2">Editar</a>
+            <button (click)="eliminar(auto._id)" class="btn btn-danger btn-sm w-50">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="autos.length === 0" class="text-center text-muted mt-5">
+    No hay autos registrados.
+  </div>
+</div>

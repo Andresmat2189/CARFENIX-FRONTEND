@@ -1,0 +1,57 @@
+/* Estilo profesional con sombra superpuesta */
+$shadow1: rgba(0, 0, 0, 0.05);
+$shadow2: rgba(0, 0, 0, 0.1);
+
+/* Imagen principal – caja 4:3 */
+.main-image-container {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 4 / 3;
+  margin: 0 auto 1.5rem;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px $shadow1, 0 12px 30px $shadow2;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+/* Galería responsive */
+.thumbnail-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+/* Miniatura en caja uniforme con sombra */
+.thumbnail-container {
+  position: relative;
+  width: 120px;
+  aspect-ratio: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 6px $shadow1, 0 6px 20px $shadow2;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px $shadow1, 0 12px 30px $shadow2;
+  }
+
+  &.selected {
+    box-shadow: 0 0 0 3px #007bff inset, 0 4px 8px $shadow2;
+  }
+}

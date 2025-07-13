@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #121212; /* Gris muy oscuro cercano al negro */
+  color: #E0E0E0;            /* Texto claro para leer bien */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Enlaces visibles y destacados */
+a {
+  color: #BB86FC;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Tarjetas del catálogo estilo oscuro */
+.card {
+  background-color: #1E1E1E;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Cuerpo de las tarjetas */
+.card-body {
+  color: #E0E0E0;
+}
+
+/* Botón "Volver" oscuro */
+.btn-secondary {
+  background-color: #333333;
+  border-color: #444444;
+  color: #E0E0E0;
+}
+
+.btn-secondary:hover {
+  background-color: #4A4A4A;
+  border-color: #555555;
+}
+
+/* Boceto básico para inputs y contenedores */
+.container {
+  background-color: #121212;
+}
+
+/* Miniaturas destacadas con sombra */
+.thumbnail-container {
+  background-color: #1E1E1E;
+}
+
+/* Imagen principal en detalle */
+.main-image-container {
+  background-color: #1E1E1E;
+}

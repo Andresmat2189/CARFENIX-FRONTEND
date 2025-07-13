@@ -1,0 +1,17 @@
+//@import "../node_modules/@ng-select/ng-select/themes/default.theme.css";
+
+//configuracion global de stilos
+
+
+/* src/app/app.component.scss */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}

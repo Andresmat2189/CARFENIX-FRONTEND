@@ -1,0 +1,102 @@
+/* ------------------------------
+   FUENTE GOOGLE - BEBAS NEUE
+------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* ------------------------------
+   TÍTULO PRINCIPAL: Fenix Cars
+------------------------------ */
+.catalog-title {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 8rem;
+  color: #035c97;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 2s ease, shine 2s infinite;
+  position: relative;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efecto de brillo */
+@keyframes shine {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #4db8ff, 0 0 20px #ff8800;
+  }
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #4db8ff, 0 0 30px #ff8800;
+  }
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #4db8ff, 0 0 20px #ff8800;
+  }
+}
+
+/* ------------------------------
+   FONDO CON TEXTURA - CATALOGO
+------------------------------ */
+body {
+  background-color: #000;
+  background-image: url('https://res.cloudinary.com/dkskto5xw/image/upload/v1720200000/carbon-fiber-texture-dark.png');
+  background-repeat: repeat;
+  background-size: 200px 200px; /* Repite más veces para que se note */
+  padding: 3rem 1rem;
+  min-height: 100vh;
+}
+
+/* ------------------------------
+   TARJETAS DE AUTOS
+------------------------------ */
+.custom-card {
+  background-color: #1E1E1E;
+  border: 2px solid #ff7f00;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+
+.custom-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+  border-color: #ffa500;
+}
+
+/* ------------------------------
+   IMÁGENES RESPONSIVAS
+------------------------------ */
+.object-fit-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ------------------------------
+   ESTILOS GENERALES
+------------------------------ */
+body {
+  background-color: #050505;
+  color: #E0E0E0;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: #BB86FC;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

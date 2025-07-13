@@ -1,0 +1,33 @@
+<div class="catalog-background">
+  <div class="container py-5">
+    <h2 class="catalog-title">CAR FENIX</h2>
+
+    <!-- Catálogo -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      <div *ngFor="let auto of autos" class="col">
+        <a [routerLink]="['/autos', auto._id]" class="text-decoration-none">
+          <div class="card h-100 custom-card">
+            <div class="ratio ratio-4x3">
+              <img *ngIf="auto.imagenes?.length"
+                   [src]="auto.imagenes[0]"
+                   class="card-img-top object-fit-cover"
+                   alt="Imagen del auto">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">{{ auto.marca }} - {{ auto.modelo }}</h5>
+              <p class="card-text flex-grow-1">{{ auto.descripcion }}</p>
+              <p class="fw-bold text-success mb-2">
+                Precio: {{ auto.precio | currency:'COP':'symbol' }}
+              </p>
+              <a href="#" class="btn btn-primary mt-auto">Ver detalles</a>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div *ngIf="autos.length === 0" class="text-center text-muted mt-5">
+      No hay autos disponibles en este momento.
+    </div>
+  </div>
+</div>

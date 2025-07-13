@@ -1,0 +1,30 @@
+<div *ngIf="auto" class="container mt-5">
+  <button class="btn btn-secondary mb-3" (click)="goBack()">← Volver</button>
+
+  <h2>{{ auto.marca }} – {{ auto.modelo }}</h2>
+  <p>{{ auto.descripcion }}</p>
+  <p class="fw-bold text-success">
+    Precio: {{ auto.precio | currency:'COP':'symbol' }}
+  </p>
+
+  <!-- Imagen principal -->
+  <div class="main-image-container mb-4">
+    <img [src]="imagenPrincipal" alt="Imagen principal">
+  </div>
+
+  <!-- Miniaturas -->
+  <div class="thumbnail-gallery">
+    <div
+      *ngFor="let url of auto.imagenes"
+      class="thumbnail-container"
+      [class.selected]="url === imagenPrincipal"
+      (click)="cambiarImagenPrincipal(url)"
+    >
+      <img [src]="url" alt="Miniatura">
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!auto" class="text-center mt-5">
+  Cargando detalles...
+</div>
