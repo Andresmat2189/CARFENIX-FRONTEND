@@ -15,7 +15,7 @@ export interface Auto {
   providedIn: 'root'
 })
 export class AutoService {
-  private apiUrl = 'http://localhost:3000/api/autos';
+  private apiUrl = 'https://carfenix-backend.onrender.com/api/autos';
   private tokenKey = 'auth_token';
 
   constructor(private http: HttpClient) {}

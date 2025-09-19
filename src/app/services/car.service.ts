@@ -16,7 +16,7 @@ export interface Car {
   providedIn: 'root'
 })
 export class CarService {
-  private baseUrl = 'http://localhost:3000/api/autos';
+  private baseUrl = 'https://carfenix-backend.onrender.com/api/autos';
 
   constructor(private http: HttpClient, private authService: AuthService) {}
 
