@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class AuthService {
   private readonly TOKEN_KEY = 'auth_token';
   private readonly ROLE_KEY = 'user_role';
-  private readonly API_URL = 'http://localhost:3000/api'; // ✅ Ruta del backend
+  private readonly API_URL = 'https://carfenix-backend.onrender.com'; // ✅ Ruta del backend
 
   constructor(private http: HttpClient) {}
 

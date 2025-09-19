@@ -32,7 +32,7 @@ export class RegistroComponent {
   constructor(private http: HttpClient, private router: Router) {}
 
   registrar() {
-    this.http.post('http://localhost:3000/api/registro', {
+    this.http.post('https://carfenix-backend.onrender.com/api/registro', {
       username: this.username,
       password: this.password
     }).subscribe({

@@ -35,7 +35,7 @@ export class EditarAutoComponent implements OnInit {
     const idFromRoute = this.route.snapshot.paramMap.get('id');
     if (idFromRoute) {
       this.id = idFromRoute;
-      this.http.get(`http://localhost:3000/api/autos/${this.id}`).subscribe((data) => {
+      this.http.get('https://carfenix-backend.onrender.com/api').subscribe((data) => {
         this.auto = data;
       });
     } else {
@@ -47,7 +47,7 @@ export class EditarAutoComponent implements OnInit {
   guardarCambios() {
     if (!this.id) return;
 
-    this.http.put(`http://localhost:3000/api/autos/${this.id}`, this.auto).subscribe(() => {
+    this.http.put('https://carfenix-backend.onrender.com/api', this.auto).subscribe(() => {
       alert('✅ Auto actualizado');
       this.router.navigate(['/lista']);
     });

@@ -136,7 +136,7 @@ export class AgregarAutoComponent implements OnInit {
     console.log('📤 FormData:', formData);
 
 
-    this.http.post('http://localhost:3000/api/autos', formData, { headers }).subscribe({
+    this.http.post('https://carfenix-backend.onrender.com/api', formData, { headers }).subscribe({
       next: (res) => {
         alert('✅ Auto agregado correctamente');
         // Limpiar formulario
